@@ -1,0 +1,25 @@
+* {
+  border: 1px dashed red;
+}
+body {
+  background-color: #562495;
+}
+h1 {
+  font-family: Futura;
+  color: White;
+}
+
+.category {
+  border: 1px solid blue;
+}
+
+div div {
+  border: 1px dashed green;
+  display: inline-block;
+  
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
