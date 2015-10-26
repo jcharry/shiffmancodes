@@ -1,4 +1,5 @@
 // A2Z F15
+//Eve and Jaimi are making changes
 // Daniel Shiffman
 // https://github.com/shiffman/A2Z-F15
 // HERE'S MY COMMENT FOR MY PUSH, yo
@@ -82,6 +83,8 @@ function setup() {
         }
       }
     }
+    
+    console.log("hi, testing github")
 
     // create divs within parent div - one for each video
 
