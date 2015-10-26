@@ -18,6 +18,10 @@
 
 // [ { label: apple, number: 9 }, { label: pear, number: 4 }, { label: orange, number: 3 } ]
 
+var videos;
+
+
+
 function setup() {
   // This is the URL for my google sheet
   // The sheet is generated from this form: http://goo.gl/forms/0X67GZJTZJ
@@ -38,28 +42,44 @@ function setup() {
   // Each object contains all the data for one row of the sheet
   // See comment above
 
-  var titles = [];
+  //var titles = [];
+
+
+  function compare(a, b) {
+    if (a.cleanTitle > b.cleanTitle) {
+      return 1;
+    } else if (b.cleanTitle > a.cleanTitle) {
+      return -1;
+    } else {
+      return 0;
+    }
+  }
+
+
   function gotData(data) {
-    for (var i = 0; i< data.length; i++) {
+    videos = data;
+    for (var i = 0; i < data.length; i++) {
       var title = data[i].title.split("");
       if (title[3] === ' ') {
-        title.splice(2,0,'0');
+        title.splice(2, 0, '0');
       }
       var joinedTitle = title.join();
-      var cleanTitle = joinedTitle.replace(/\,/g,'');
-      titles.push(cleanTitle);
+      //var cleanTitle = joinedTitle.replace(/\,/g, '');
+      data[i].cleanTitle = joinedTitle.replace(/\,/g, '');
+      //titles.push(cleanTitle);
     }
 
-    var sortedTitles = titles.sort();
-    print(sortedTitles);
+    data.sort(compare);
+    //var sortedTitles = titles.sort();
+    //println(sortedVideos);
     var sortedObjArr = [];
-    
+
     // for (var i = 0; i < data.length; i++) {
     //   if ()
     // }
-    
-    
-    
+
+
+
 
     // get list of all videos
     // get all category divs
@@ -69,22 +89,22 @@ function setup() {
 
     for (var j = 0; j < allDivs.length; j++) {
       // for each div, loop thorugh all videos, only add ones that match the category
-      var header = allDivs[j].elt.children[0].innerHTML;  // NOTE: Must get element out of div
+      var header = allDivs[j].elt.children[0].innerHTML; // NOTE: Must get element out of div
 
       for (var i = 0; i < data.length; i++) {
         if (header.toLowerCase() === data[i].category.toLowerCase()) {
-          
-          console.log("raw embed data " + data[i].embed);
+
+          //console.log("raw embed data " + data[i].embed);
           var embed = createDiv(data[i].embed);
-          embed.style('width','360px');
-          embed.style('height','202px');
-          
+          embed.style('width', '360px');
+          embed.style('height', '202px');
+
           allDivs[j].child(embed);
         }
       }
     }
-    
-    console.log("hi, testing github")
+
+    //console.log("hi, testing github")
 
     // create divs within parent div - one for each video
 
