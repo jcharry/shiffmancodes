@@ -1,6 +1,6 @@
-* {
-  border: 1px dashed red;
-}
+/** {*/
+/*  border: 1px dashed red;*/
+/*}*/
 body {
   background-color: #562495;
 }
@@ -9,12 +9,22 @@ h1 {
   color: White;
 }
 
-.category {
-  border: 1px solid blue;
+.category h1 {
+  border-bottom: thick solid white;
 }
 
-div div {
-  border: 1px dashed green;
+button {
+  float: right;
+}
+
+/*.category {*/
+/*  border: 1px solid blue;*/
+/*}*/
+
+div {
+  padding: 0px 5px 0px 5px;
+  vertical-align: top;
+  /*border: 1px dashed green;*/
   display: inline-block;
   
 }
@@ -24,9 +34,12 @@ iframe {
   height: 100%;
 }
 
-p{
-   font-family: Futura;
+div p {
+  padding: 0px 10px 0px 10px;
+  font-family: Futura;
   color: White;
-  width: 300px;
+  width: 360px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   
 }
