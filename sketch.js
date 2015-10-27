@@ -79,8 +79,8 @@ function setup() {
           embed.style('height', '202px');
 
           allDivs[j].child(embed);
-          console.log(data[j].descr);
-          var description = createP(data[j].descr);
+          console.log(data[i].descr);
+          var description = createP(data[i].descr);
           allDivs[j].child(description);
           
         }
