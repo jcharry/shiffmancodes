@@ -1,25 +1,4 @@
-// A2Z F15
-//Eve and Jaimi are making changes
-// Daniel Shiffman
-// https://github.com/shiffman/A2Z-F15
-
-// This sheet
-// | ----------------|
-// | label  | number |
-// | ----------------|
-// | apple  | 9      |
-// | ----------------|
-// | pear   | 4      |
-// | ----------------|
-// | orange | 3      |
-// | ----------------|
-
-// Turns into:
-
-// [ { label: apple, number: 9 }, { label: pear, number: 4 }, { label: orange, number: 3 } ]
-
 var videos;
-
 
 
 function setup() {
@@ -100,6 +79,10 @@ function setup() {
           embed.style('height', '202px');
 
           allDivs[j].child(embed);
+          console.log(data[j].descr);
+          var description = createP(data[j].descr);
+          allDivs[j].child(description);
+          
         }
       }
     }
