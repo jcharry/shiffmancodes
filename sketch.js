@@ -59,7 +59,7 @@ function setup() {
   }
 
 
-  function compare(a, b) {
+  function compare(a, b) {//sort the cleaned up titles
     if (a.cleanTitle > b.cleanTitle) {
       return 1;
     } else if (b.cleanTitle > a.cleanTitle) {
