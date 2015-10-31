@@ -39,21 +39,28 @@ function setup() {
 
   function toggleVisibleVideos() {
     var p5Div = document.getElementById('p5section');
-    var procDiv = document.getElementyById('processing');
-    var nocDiv = document.getElementById('natureofcode')
+    var procDiv = document.getElementById('processingsection');
+    var nocDiv = document.getElementById('natureofcodesection')
     
     switch (this.html()) {
       case 'p5':
         console.log(this.html());
         p5Div.style.display = 'inline';
+        nocDiv.style.display = 'none';
+        procDiv.style.display = 'none';
         break;
       case 'Processing':
         console.log(this.html());
+        procDiv.style.display = 'inline';
         p5Div.style.display = 'none';
+        nocDiv.style.display = 'none';
         break;
       case 'Nature of Code':
+        console.log(this.html());
+        nocDiv.style.display = 'inline';
         p5Div.style.display = 'none';
-        p5Div.hide();
+         procDiv.style.display = 'none';
+        // p5Div.hide();
         break;
     }
   }
