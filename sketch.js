@@ -14,7 +14,7 @@ function setup() {
     simpleSheet: true // This makes things simpler for just a single worksheet of rows
   }
 
-  // Make the request
+  // Make the request - I'M NOT DELETED, YO
   Tabletop.init(settings);
 
   // The data comes back as an array of objects
